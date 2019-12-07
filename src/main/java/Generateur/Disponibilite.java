@@ -2,9 +2,12 @@ package Generateur;
 
 public class Disponibilite {
 
-    int heure;
-    int jour;
-    String Prof;
+    int heure; // 0 = matin, 1 = aprem
+    int jour; // 0 = lundi, 5 = samedi
+    String Prof; // nom du professeur en cas de disponibilite, vide en cas de contrainte
+
+    public Disponibilite() {
+    }
 
     public Disponibilite(int heure, int jour, String prof) {
         this.heure = heure;
@@ -34,5 +37,14 @@ public class Disponibilite {
 
     public void setProf(String prof) {
         Prof = prof;
+    }
+
+    @Override
+    public String toString() {
+        return "Disponibilite{" +
+                "heure=" + heure +
+                ", jour=" + jour +
+                ", Prof='" + Prof + '\'' +
+                '}';
     }
 }
